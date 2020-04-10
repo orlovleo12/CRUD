@@ -2,6 +2,7 @@ package main.java.dao;
 
 import main.java.JdbcUtil;
 import main.java.model.User;
+
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
