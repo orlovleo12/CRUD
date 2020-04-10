@@ -42,7 +42,7 @@ public class ServletEdit extends HttpServlet {
             user.setLogin(request.getParameter("login"));
             user.setPassword(request.getParameter("password"));
             service.updateUser(user);
-
+            User user1 = service.getUserByLogin(request.getParameter("name"));
             String forward = LIST_USER;
 
             request.setAttribute("users", service.getAllUsers());

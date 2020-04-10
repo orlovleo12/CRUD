@@ -24,6 +24,7 @@ public class ServletList extends HttpServlet {
 
         RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);
+
     }
 
 }
