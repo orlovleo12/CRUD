@@ -1,7 +1,17 @@
 package main.java.model;
 
-public class User {
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Proxy;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "table_name")
+@Proxy(lazy=false)
+public class User {
+    @Id
+    @GenericGenerator(name="123" , strategy="increment")
+    @GeneratedValue(generator="123")
     private int id;
 
     private String name;

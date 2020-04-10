@@ -2,6 +2,7 @@ package main.java.service;
 
 
 import main.java.dao.UserDao;
+import main.java.dao.UserDaoHibernateImpl;
 import main.java.dao.UserDaoJDBCImpl;
 import main.java.model.User;
 
@@ -9,7 +10,7 @@ import java.util.List;
 
 public class UserServiceImpl implements UserService {
     private static UserServiceImpl userServiceImpl = new UserServiceImpl();
-    private UserDao userDao = new UserDaoJDBCImpl();
+    private UserDao userDao = new UserDaoHibernateImpl();
 
     public UserServiceImpl() {
 
